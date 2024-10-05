@@ -6,7 +6,7 @@ import Gallery from "@/components/gallery";
 import Info from "@/components/info";
 
 
-const PreviewModal: React.FC<{}> = () => {
+const PreviewModal: React.FC = () => {
     const previewModal = usePreviewModal();
     const product = usePreviewModal((state) => state.data);
 

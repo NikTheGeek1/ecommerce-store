@@ -14,6 +14,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     return (
         <button {...props} ref={ref}
             disabled={disabled}
+            type={type}
             className={cn(
                 `
                 w-auto
@@ -37,4 +38,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 });
 
 
+Button.displayName = "Button";
 export default Button;
