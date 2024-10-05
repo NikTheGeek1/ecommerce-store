@@ -21,9 +21,14 @@ const getProducts = async (query: Query): Promise<Product[]> => {
             isFeatured: query.isFeatured,
         },
     });
-    const res = await fetch(url);
-    const data = await res.json();
-    return data;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching products", error);
+        return [];
+    }
 };
 
 export default getProducts;
