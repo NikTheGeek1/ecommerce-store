@@ -5,7 +5,7 @@ import Billboard from "@/components/billboard";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
-export const revalidation = 0; // no cached
+export const revalidate = 0; // no cache
 
 const HomePage = async () => {
     const products = await getProducts({ isFeatured: true });
